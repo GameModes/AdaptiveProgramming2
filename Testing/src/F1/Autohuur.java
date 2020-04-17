@@ -1,9 +1,9 @@
 package F1;
 
 public class Autohuur {
-	Integer aantalDagen;
-	Auto auto;
-	Klant klant;
+	private Integer aantalDagen;
+	private Auto auto;
+	private Klant klant;
 		
 	public void setGehuurdeAuto(Auto gA) {
 		auto = gA;
@@ -26,7 +26,7 @@ public class Autohuur {
 	}
 	
 	public double totaalPrijs() {
-		Double totaalprijs = aantalDagen*auto.prijsPerDag - aantalDagen*auto.prijsPerDag*(klant.kortingsPercentage/100);
+		double totaalprijs = aantalDagen*auto.prijsPerDag - aantalDagen*auto.prijsPerDag*(klant.kortingsPercentage/100);
 		return totaalprijs;
 	}
 
@@ -45,7 +45,7 @@ public class Autohuur {
             a = a + "\t " + getHuurder().toString() + "\n";
         }
 
-        if (this.aantalDagen == null) {
+        if (aantalDagen == null) {
             a = a + "\t aantal dagen: 0 en dat kost 0.0 \n";
         } else {
             a = a + "\t aantal dagen: " + this.aantalDagen + " en dat kost " + totaalPrijs() + "\n";

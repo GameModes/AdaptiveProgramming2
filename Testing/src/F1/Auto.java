@@ -1,7 +1,7 @@
 package F1;
 
 public class Auto {
-	String type;
+	private String type;
 	double prijsPerDag;
 	
 	public Auto(String tp, double prPd) {

@@ -45,13 +45,36 @@ public boolean koop(Game g) {
 		}
 	return buyable;
 }
-	
+
+public boolean verkoop(Game g, Player koper ) {
+	boolean buyable = true;
+	if (koper.bezit.contains(g.toString()) == true) {
+		buyable = false;
+	}
+	if (bezit.contains(g.toString()) != true) {
+		buyable = false;   
+	}     
+	if (koper.getBudget() < g.newWaarde(g.getWaarde())){
+		buyable = false;
+	}
+	if (buyable == true) {
+		koper.bezit.add(g.toString());
+		koper.Budget = koper.Budget - g.newWaarde(g.getWaarde());
+		bezit.remove(g.toString());
+		Budget = Budget + g.newWaarde(g.getWaarde());
+		}
+	return buyable;
+}
+
 
 public String toString() {
 	String k = naam + " heeft een budget van $" + Budget + " en bezit de volgende games: \n";
+	
 	for (int i = 0; i < bezit.size(); i++) {
 	      k = k + bezit.get(i) + "\n";
+
 	    }
+
 	return k;
 }
 	

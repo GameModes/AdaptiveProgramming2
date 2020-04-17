@@ -1,7 +1,7 @@
 package F1;
 
 public class Klant {
-	String naam;
+	private String naam;
 	double kortingsPercentage;
 	
 	public Klant(String nm) {
@@ -19,9 +19,6 @@ public class Klant {
 	}
 	
 	public String toString() {
-		if (naam == null) {
-			naam = "onbekende huurder";
-		}
 		String k = "op naam van: " + naam + "(korting: " + kortingsPercentage + "%)";
 		return k;
 	}
