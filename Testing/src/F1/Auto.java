@@ -1,18 +1,25 @@
 package F1;
 
 public class Auto {
-	private String type;
-	private double prijsPerDag;
+	String type;
+	double prijsPerDag;
 	
-	public Auto(String tp, double prPD) {
+	public Auto(String tp, double prPd) {
 		type = tp;
-		prijsPerDag = prPD;
+		prijsPerDag = prPd;
 		
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public double getPrijsPerDag() {
+		return prijsPerDag;
 	}
-
+	
+	public void setPrijsPerDag(double prPd) {
+		prijsPerDag = prPd;
+	}
+	
+	public String toString() {
+		String a =  type + " met prijs per dag: " + prijsPerDag;
+		return a;
+	}
 }
