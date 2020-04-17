@@ -26,21 +26,7 @@ public class MainGame {
         System.out.println("p1: " + p1.toString());
         System.out.println("p2: " + p2.toString());
         System.out.println("p3: " + p3.toString());
-//        System.out.println("Eerste autohuur: " + "\n" + ah1.toString());
-//
-//        Auto a1 = new Auto("Peugeot 207 ", 50);
-//        ah1.setGehuurdeAuto(a1);
-//        ah1.setAantalDagen(4);
-//        System.out.println("Eerste autohuur: " + "\n" + ah1.toString());
-//
-//        Autohuur ah2 = new Autohuur();
-//        Auto a2 = new Auto("Ferrari", 3500);
-//        ah2.setGehuurdeAuto(a2);
-//        ah2.setHuurder(k);
-//        ah2.setAantalDagen(1);
-//        System.out.println("Tweede autohuur: " + "\n" + ah2.toString());
-//        System.out.println("Gehuurd: " + ah1.getGehuurdeAuto());
-//        System.out.println("Gehuurd: " + ah2.getGehuurdeAuto());
+
 	}
 
 }
