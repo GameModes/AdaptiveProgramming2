@@ -1,5 +1,5 @@
 package domeindesign1;
 
-public class Trainers {
+public class Rol {
 
 }

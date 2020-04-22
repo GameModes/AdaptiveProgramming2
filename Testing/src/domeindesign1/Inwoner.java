@@ -1,5 +1,5 @@
 package domeindesign1;
 
-public class Badges {
+public class Inwoner {
 
 }
