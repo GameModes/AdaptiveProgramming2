@@ -5,8 +5,9 @@ public class Pokemons {
 	private String type;
 	
 	public Pokemons(String pn, String tp) {
-		type = tp;
 		pokemonnaam = pn;
+		type = tp;
+		
 	}
 	
 	public String getPokemonnaam() {
@@ -26,7 +27,7 @@ public class Pokemons {
 	}
 
 	public String toString() {
-		String pokemon =  pokemonnaam + " (" + type + " type)" ;
+		String pokemon =  "\t "+ pokemonnaam + " (" + type + " type)\n" ;
 		return pokemon;
 	}
 }
