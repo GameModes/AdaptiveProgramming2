@@ -32,7 +32,7 @@ public class Gymleader implements AchievementNPC{
 
 	@Override
 	public void setAchievement() {
-		System.out.println("Wel Achievement\n");
+		System.out.println("Wel Achievement");
 		
 	}
 }

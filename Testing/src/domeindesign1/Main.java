@@ -7,7 +7,6 @@ public class Main {
 		Trainer t1 = new Trainer(9, false, true);
 		n1.setTrainer(t1);
 		Elitefour e1 = new Elitefour("Ghost");
-		
 		t1.setElitefourrol(e1);
 		Route r1 = new Route(8, "Regenachtig");
 		n1.setRoute(r1);
@@ -21,6 +20,7 @@ public class Main {
 		t1.getPokemons(p94);
 		System.out.println(n1.toString());
 		e1.setAchievement();
+		System.out.println("---------------------------------------------------------------------------");
 		
 		NPC n2 = new NPC("Brock");
 		Trainer t2 = new Trainer(9, true, false);
@@ -37,6 +37,7 @@ public class Main {
 		t2.getPokemons(p95);
 		System.out.println(n2.toString());
 		g1.setAchievement();
+		System.out.println("---------------------------------------------------------------------------");
 		
 		NPC n3 = new NPC("Ash");
 		Trainer t3 = new Trainer(2, false, false);
@@ -57,6 +58,7 @@ public class Main {
 		n3.getItems(i18);
 		n3.getItems(i15);
 		System.out.println(n3.toString());
+		System.out.println("---------------------------------------------------------------------------");
 		
 		NPC n4 = new NPC("Sister Joy");
 		Vendor v1 = new Vendor(true);
@@ -68,6 +70,16 @@ public class Main {
 		n4.getItems(i16);
 		n4.getItems(i16);
 		System.out.println(n4.toString());
+		System.out.println("---------------------------------------------------------------------------");
+		
+		NPC n5 = new NPC("Technology-is-amazing guy");
+		Vendor v2 = new Vendor(true);
+		n5.setVendor(v2);
+		Items t59 = new Items("Dream Eater", "TM");
+		n5.getItems(t59);
+		Route r15 = new Route(15, "Zonnig");
+		n5.setRoute(r15);
+		System.out.println(n5.toString());
 	}
 
 }

@@ -16,7 +16,7 @@ public class Elitefour implements AchievementNPC {
 	}
 	
 	public void setAchievement() {
-		System.out.println("Geen Achievement\n");
+		System.out.println("Geen Achievement");
 	}
 	
 	public String toString() {
