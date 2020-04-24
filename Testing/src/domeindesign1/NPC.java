@@ -76,7 +76,7 @@ public class NPC {
 		
 		}
 		if (route != null) {
-			inwoner = inwoner + "\nEn staat op " + getRoute() + "\n";
+			inwoner = inwoner + "\nEn staat op " + getRoute();
 		}
 		else {
 			inwoner = inwoner + "\nEn staat op geen route";

@@ -7,7 +7,7 @@ public class Main {
 		Trainer t1 = new Trainer(9, false, true);
 		n1.setTrainer(t1);
 		Elitefour e1 = new Elitefour("Ghost");
-		e1.setAchievement();
+		
 		t1.setElitefourrol(e1);
 		Route r1 = new Route(8, "Regenachtig");
 		n1.setRoute(r1);
@@ -20,6 +20,7 @@ public class Main {
 		t1.getPokemons(p94);
 		t1.getPokemons(p94);
 		System.out.println(n1.toString());
+		e1.setAchievement();
 		
 		NPC n2 = new NPC("Brock");
 		Trainer t2 = new Trainer(9, true, false);
@@ -35,6 +36,7 @@ public class Main {
 		t2.getPokemons(p74);
 		t2.getPokemons(p95);
 		System.out.println(n2.toString());
+		g1.setAchievement();
 		
 		NPC n3 = new NPC("Ash");
 		Trainer t3 = new Trainer(2, false, false);

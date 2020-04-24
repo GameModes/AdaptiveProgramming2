@@ -16,7 +16,7 @@ public class Elitefour implements AchievementNPC {
 	}
 	
 	public void setAchievement() {
-		System.out.println("The pig says: wee wee");
+		System.out.println("Geen Achievement\n");
 	}
 	
 	public String toString() {

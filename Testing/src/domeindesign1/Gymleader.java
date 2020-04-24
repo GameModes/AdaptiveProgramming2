@@ -1,6 +1,6 @@
 package domeindesign1;
 
-public class Gymleader{
+public class Gymleader implements AchievementNPC{
 	private String type;
 	private String badge;
 	
@@ -28,5 +28,11 @@ public class Gymleader{
 	public String toString() {
 		String rol = "Gymleader (" + getType()+ " type) en geeft de " + getBadge();
 		return rol;
+	}
+
+	@Override
+	public void setAchievement() {
+		System.out.println("Wel Achievement\n");
+		
 	}
 }
