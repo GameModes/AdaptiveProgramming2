@@ -12,6 +12,7 @@ public class NPC {
 	
 	public NPC(String nm) {
 		naam = nm;
+		
 
 	}
 	

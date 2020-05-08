@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		NPC n1 = new NPC("Agatha");
-		Trainer t1 = new Trainer(9, false, true);
+		Trainer t1 = new Trainer("Agatha", 9, false, true);
 		n1.setTrainer(t1);
 		Elitefour e1 = new Elitefour("Ghost");
 		t1.setElitefourrol(e1);
@@ -23,7 +23,7 @@ public class Main {
 		System.out.println("---------------------------------------------------------------------------");
 		
 		NPC n2 = new NPC("Brock");
-		Trainer t2 = new Trainer(9, true, false);
+		Trainer t2 = new Trainer("Brock", 9, true, false);
 		n2.setTrainer(t2);
 		Gymleader g1 = new Gymleader("Rock", "Rockbadge");
 		t2.setGymleaderrol(g1);
@@ -40,7 +40,7 @@ public class Main {
 		System.out.println("---------------------------------------------------------------------------");
 		
 		NPC n3 = new NPC("Ash");
-		Trainer t3 = new Trainer(2, false, false);
+		Trainer t3 = new Trainer("Ash", 2, false, false);
 		n3.setTrainer(t3);
 		Route r3 = new Route(4, "Bewolkt");
 		n3.setRoute(r3);

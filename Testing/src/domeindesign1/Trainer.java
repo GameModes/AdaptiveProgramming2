@@ -2,7 +2,7 @@ package domeindesign1;
 
 import java.util.ArrayList;
 
-public class Trainer {
+public class Trainer extends NPC{
 	private int badges;
 	private Pokemons pokemons;
 	private boolean gymleader;
@@ -11,7 +11,8 @@ public class Trainer {
 	private boolean elitefour;
 	ArrayList<String> bezitpokemons = new ArrayList<String>();
 	
-	public Trainer(int bd, boolean gl, boolean ef) {
+	public Trainer(String nm, int bd, boolean gl, boolean ef) {
+		super(nm);
 		badges = bd;
 		gymleader = gl;
 		elitefour = ef;
