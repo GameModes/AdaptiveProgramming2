@@ -30,5 +30,9 @@ public class Main {
 		K2.setVerbinding(1, K5);
 		K2.setVerbinding(0, K6);
 		
+		try {
+			System.out.println(K0.Dobbelsteennummer("Dobbelsteenogen?"));
+		Finally
+		}
 	}
 }
