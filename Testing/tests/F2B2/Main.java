@@ -1,10 +1,14 @@
-package F2B;
+package F2B2;
 
 import F2A.Node;
 
 public class Main {
 	public static void main(String[] args) {
-
+		int dobbelsteenogen = 12;
+		
+		for (int j=1 ; j<dobbelsteenogen.length ; j++) {
+			
+		}
 		KansNode K0 = new KansNode("K0", false);
 		KansNode K1 = new KansNode("K1", false);
 		KansNode K2 = new KansNode("K2", false);
@@ -30,9 +34,9 @@ public class Main {
 		K2.setVerbinding(1, K5);
 		K2.setVerbinding(0, K6);
 		
-		try {
-			System.out.println(K0.Dobbelsteennummer("Dobbelsteenogen?"));
-		Finally
-		}
+//		try {
+//			System.out.println(K0.Dobbelsteennummer("Dobbelsteenogen?"));
+//		Finally
+//		}
 	}
 }
