@@ -15,24 +15,27 @@ public class DobbelNode {
 	ArrayList<DobbelNode> kansen = new ArrayList<DobbelNode>();
 	HashMap<DobbelNode, Double> locatieSprong = new HashMap<DobbelNode, Double>();
 	private String nodeNaam;
-	private Boolean endState;
+	
+	public HashMap<DobbelNode, Double> getLocatieSprong() {
+		return locatieSprong;
+	}
 
 
-	public DobbelNode(String nn, boolean es) {
+
+	public void setLocatieSprong(HashMap<DobbelNode, Double> locatieSprong) {
+		this.locatieSprong = locatieSprong;
+	}
+
+
+
+		
+
+
+	public DobbelNode(String nn) {
 		nodeNaam = nn;
-		endState = es;
 		
 	}
 
-
-	public Boolean getEndState() {
-		return endState;
-	}
-
-
-	public void setEndState(Boolean endState) {
-		this.endState = endState;
-	}
 
 
 	public String getNodeNaam() {
@@ -44,7 +47,7 @@ public class DobbelNode {
 	public void setVerbinding(DobbelNode nummer, double kansnummer) {
 		locatieSprong.put(nummer, kansnummer);
 		
-	}
+	}	
 	
 	public HashMap mapSorter(HashMap locatieSprong) { //Source: https://beginnersbook.com/2013/12/how-to-sort-hashmap-in-java-by-keys-and-values/
 	       List list = new LinkedList(locatieSprong.entrySet()); //sort hashmap by values
@@ -65,27 +68,27 @@ public class DobbelNode {
 	
 	
 	public DobbelNode nextLocatie() {
-		  Double random3 = Math.random(); 
-		  Double lagerdan = 0.0;
+		  Double random = Math.random(); 
+		  Double lagerDan = 0.0;
 		  locatieSprong =  mapSorter(locatieSprong);
+		  DobbelNode volgendeNode = null; //Vind de volgende node met random
 		  
-		  DobbelNode volgendenode = null; //Vind de volgende node met random
-		  boolean gevondenlager = false;
 		      for(int c = 0; c < locatieSprong.size(); c++){
 		    	  Double locatievalue = locatieSprong.get(locatieSprong.keySet().toArray()[c]);
-		    	  if(locatievalue > random3 && gevondenlager == false){
-		    		  lagerdan = locatievalue;
-		    		  gevondenlager = true;
+		    	  if(locatievalue > random){
+		    		  lagerDan = locatievalue;
+		    		  break;
 		    		  
 		    	  }
+		      }
 		          for(Map.Entry x: locatieSprong.entrySet()){ //Krijg de key van de gevonden value
-		              if(lagerdan.equals(x.getValue())){
-		            	  volgendenode = (DobbelNode) x.getKey();
+		              if(lagerDan.equals(x.getValue())){
+		            	  volgendeNode = (DobbelNode) x.getKey();
 		                  break;
 		              }
-		          }
+		          
 		      }
-		      return volgendenode;
+		      return volgendeNode;
 		}
 
 		
