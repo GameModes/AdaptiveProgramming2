@@ -3,7 +3,7 @@ package F2A;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Node {
+public class Node {	
 	private String naam;
 	ArrayList<String> path = new ArrayList<String>();
 	HashMap<String, Node> locatiesprong = new HashMap<String, Node>();

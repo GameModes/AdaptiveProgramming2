@@ -71,22 +71,22 @@ public class KansNode {
 		  
 		  
 		  
-		  KansNode volgendenode = null; //Vind de volgende node met random
-		  boolean gevondenlager = false;
+		  
 		      for(int c = 0; c < locatiesprong.size(); c++){
 		    	  Double locatievalue = locatiesprong.get(locatiesprong.keySet().toArray()[c]);
-		    	  if(locatievalue > random3 && gevondenlager == false){
+		    	  if(locatievalue > random3){
 		    		  lagerdan = locatievalue;
-		    		  gevondenlager = true;
-		    		  
+		    		  break;
 		    	  }
+		    	  }
+		  KansNode volgendenode = null; //Vind de volgende node met random
 		          for(Map.Entry x: locatiesprong.entrySet()){ //Krijg de key van de gevonden value
 		              if(lagerdan.equals(x.getValue())){
 		            	  volgendenode = (KansNode) x.getKey();
 		                  break;
 		              }
 		          }
-		      }
+		      
 		      return volgendenode;
 		}
 
