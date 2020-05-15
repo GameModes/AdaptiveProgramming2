@@ -5,40 +5,41 @@ public class Main {
 	KansNode n0 = new KansNode("n0", false);
 	KansNode n1 = new KansNode("n1", false);
 	KansNode n2 = new KansNode("n2", false);
-	KansNode n3 = new KansNode("n3", true);
-	KansNode n4 = new KansNode("n4", true);
-	KansNode n5 = new KansNode("n5", true);
-	KansNode n6 = new KansNode("n6", true);
+	KansNode n3 = new KansNode("n3", false);
+	KansNode n4 = new KansNode("n4", false);
+	KansNode n5 = new KansNode("n5", false);
+	KansNode n6 = new KansNode("n6", false);
 				
-	n0.setVerbinding(n1, 1);
-	n0.setVerbinding(n2, 0.5);
+	KansNode g0 = new KansNode("0", true);
+	KansNode g1 = new KansNode("1", true);
+	KansNode g2 = new KansNode("2", true);
+	KansNode g3 = new KansNode("3", true);
+	KansNode g4 = new KansNode("4", true);
+	KansNode g5 = new KansNode("5", true);
+	KansNode g6 = new KansNode("6", true);
 	
-	n1.setVerbinding(n3, 0.4);
-	n1.setVerbinding(n4, 1);
+	n0.setVerbinding(n1, 0.5);
+	n0.setVerbinding(n2, 1);
 	
-	n2.setVerbinding(n5, 0.3);
-	n2.setVerbinding(n6, 1);
-				
-	System.out.println(Dobbelsteen.bouwDobbelsteen(n0));		
-//		KansNode K1 = new KansNode("K1", false);
-//		KansNode K2 = new KansNode("K2", false);
-//		KansNode K3 = new KansNode("K3", false);
-//		KansNode K4 = new KansNode("K4", false);
-//		KansNode K5 = new KansNode("K5", false);
-//		KansNode K6 = new KansNode("K6", false);
-//		
-//		KansNode D1 = new KansNode("1", true);
-//		KansNode D2 = new KansNode("2", true);
-//		KansNode D3 = new KansNode("3", true);
-//		KansNode D4 = new KansNode("4", true);
-//		KansNode D5 = new KansNode("5", true);
-//		KansNode D6 = new KansNode("6", true);
-		
+	n1.setVerbinding(n4, 0.4);
+	n1.setVerbinding(n3, 1);
 
-		
-//		try {
-//			System.out.println(K0.Dobbelsteennummer("Dobbelsteenogen?"));
-//		Finally
-//		}
+	n2.setVerbinding(n5, 0.8);
+	n2.setVerbinding(n6, 1);
+	
+	n3.setVerbinding(g1, 0.5);
+	n3.setVerbinding(n1, 1);
+	
+	n4.setVerbinding(g2, 0.8);
+	n4.setVerbinding(g3, 1);
+
+	n5.setVerbinding(g4, 0.3);
+	n5.setVerbinding(g5, 1);
+	
+	n6.setVerbinding(n2, 0.3);
+	n6.setVerbinding(g6, 1);
+	
+	System.out.println(Dobbelsteen.bouwDobbelsteen(n0));		
+
 	}
 }
