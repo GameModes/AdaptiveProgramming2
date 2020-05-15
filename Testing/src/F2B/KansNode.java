@@ -46,15 +46,15 @@ public class KansNode {
 	public KansNode NextLocatie() {
 			
 		  Double random3 = Math.random(); 
-		  System.out.println(random3);
+		  System.out.println("Randomgetal" + random3);
 		  Double lagerdan = 0.0;
 		  
 		  KansNode volgendenode = null;
-		  
 		  boolean gevondenlager = false;
-		  
+		  		System.out.println("de list" +locatiesprong);
 		      for(int c = 0; c < locatiesprong.size(); c++){
 		    	  Double locatievalue = locatiesprong.get(locatiesprong.keySet().toArray()[c]);
+		    	  System.out.println("getallen in de list" + locatievalue);
 		    	  if(locatievalue > random3 && gevondenlager == false){
 		    		  lagerdan = locatievalue;
 		    		  gevondenlager = true;
@@ -67,7 +67,8 @@ public class KansNode {
 		              }
 		          }
 		      }
-		      System.out.println(lagerdan);
+		      System.out.println("Gekozen getal: " +lagerdan);
+		      System.out.println("Volgendenode: " + volgendenode);
 		      return volgendenode;
 		}
 

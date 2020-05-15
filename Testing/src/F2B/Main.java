@@ -10,8 +10,8 @@ public class Main {
 	KansNode n5 = new KansNode("n5", true);
 	KansNode n6 = new KansNode("n6", true);
 				
-	n0.setVerbinding(n1, 0.5);
-	n0.setVerbinding(n2, 1);
+	n0.setVerbinding(n1, 1);
+	n0.setVerbinding(n2, 0.5);
 	
 	n1.setVerbinding(n3, 0.4);
 	n1.setVerbinding(n4, 1);
