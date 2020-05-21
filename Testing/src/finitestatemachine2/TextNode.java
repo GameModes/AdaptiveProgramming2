@@ -65,29 +65,6 @@ public class TextNode {
 	}
 	
 	
-//		  Double random = Math.random(); 
-//		  Double lagerdan = 0.0;
-//		  locatieSprong =  mapSorter(locatieSprong);
-//		  DobbelNode volgendenode = null; //Vind de volgende node met random
-//		  
-//		      for(int c = 0; c < locatieSprong.size(); c++){
-//		    	  Double locatievalue = locatieSprong.get(locatieSprong.keySet().toArray()[c]);
-//		    	  if(locatievalue > random){
-//		    		  lagerdan = locatievalue;
-//		    		  break;
-//		    		  
-//		    	  }
-//		      }
-//		          for(Map.Entry x: locatieSprong.entrySet()){ //Krijg de key van de gevonden value
-//		              if(lagerdan.equals(x.getValue())){
-//		            	  volgendenode = (DobbelNode) x.getKey();
-//		                  break;
-//		              }
-//		          
-//		      }
-//		      return volgendenode;
-//		}
-	
 }
 
 	
