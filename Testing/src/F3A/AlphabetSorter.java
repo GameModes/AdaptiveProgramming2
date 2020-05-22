@@ -2,15 +2,7 @@ package F3A;
 import java.util.*;
 
 public class AlphabetSorter {
-	List<String> arrayList = new ArrayList<String>();
-	public AlphabetSorter(ArrayList<String> aL) {
-		arrayList = aL;
-		
-
-	}
-	
 	public ArrayList<String> compareTomethod (ArrayList<String> aL){ //methode1
-		
 	      for(int i = 0; i<aL.size()-1; i++) {
 	          for (int j = i+1; j<aL.size(); j++) {
 	             if(aL.get(i).compareTo(aL.get(j))>0) {
@@ -24,7 +16,10 @@ public class AlphabetSorter {
 		
 	}	
 	
-	public ArrayList<ArrayList<Character>> charListsMaker (ArrayList<String> aL){//methode 2, hakt list in character stukjes
+	
+	
+	
+	public ArrayList<ArrayList<Character>> charListsMaker (ArrayList<String> aL){//methode 2, hakt strings in de list in character stukjes
 		ArrayList<ArrayList<Character>> wordList = new ArrayList<ArrayList<Character>>();
 		for(int index = 0; index<aL.size(); index++) {
 			String word = aL.get(index);
@@ -41,7 +36,7 @@ public class AlphabetSorter {
 	public ArrayList<ArrayList<Character>> bubbleSort (ArrayList<ArrayList<Character>> wordList) { //methode 2, vergelijkt en vervangt
 
 	int lengte = wordList.size();
-	while (lengte > 0) {
+	while (lengte > 0) {	
 		
 		lengte = lengte - 1;
 		for(int index = 0; index<wordList.size(); index++) {
@@ -52,6 +47,12 @@ public class AlphabetSorter {
 				ArrayList<Character> temp = wordList.get(index);
 				wordList.set(index, wordList.get(index+1));
 				wordList.set(index+1, temp);  }
+			else if (firstword.get(0) == secondword.get(0)) {
+				if (firstword.get(1) > secondword.get(1)) {
+					ArrayList<Character> temp = wordList.get(index);
+					wordList.set(index, wordList.get(index+1));
+					wordList.set(index+1, temp);  }
+			}
 			} catch(Exception e) {
 				break;
 			}
@@ -62,5 +63,18 @@ public class AlphabetSorter {
 		
 	}
 
-	public ArrayList<String> stringListsMaker
+	public ArrayList<String> stringListsMaker (ArrayList<ArrayList<Character>> wordList){//methode 2, zet character stukjes in list als strings
+		ArrayList<String> SortedaL = new ArrayList<String>();
+		for(int i = 0; i<wordList.size(); i++) {
+			String word = new String();
+			for(int j = 0; j<wordList.get(i).size(); j++) {
+				word = word + wordList.get(i).get(j);
+			}
+			SortedaL.add(word);
+		}
+		return SortedaL;
+		
+	}
+	
+	
 }
