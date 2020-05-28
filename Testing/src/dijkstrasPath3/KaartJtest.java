@@ -1,10 +1,12 @@
 package dijkstrasPath3;
 
 import static org.junit.Assert.*;
-
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import org.junit.Test;
 
-public class ReisJtest {
+public class KaartJtest {
 
 	@Test
 	public void test() {
@@ -14,8 +16,12 @@ public class ReisJtest {
 		Plaats nodeD = new Plaats("D"); 
 		Plaats nodeE = new Plaats("E");
 		Plaats nodeF = new Plaats("F");
-		 
-		nodeA.addDestination(nodeB, 10);
+//		 
+//		Stap s = new Rit(10, nodeB);
+//		Stap s = new Vlucht(10, nodeB);
+		
+//		nodeA.addStap(s);
+		
 		nodeA.addDestination(nodeC, 15);
 		 
 		nodeB.addDestination(nodeD, 12);
@@ -24,11 +30,11 @@ public class ReisJtest {
 		nodeC.addDestination(nodeE, 10);
 		 
 		nodeD.addDestination(nodeE, 2);
-		nodeD.addDestination(nodeF, 1);
+		nodeD.addDestination(nodeF, 10);
 		 
 		nodeF.addDestination(nodeE, 5);
 		 
-		Reis graph = new Reis();
+		Kaart graph = new Kaart();
 		 
 		graph.addNode(nodeA);
 		graph.addNode(nodeB);
@@ -37,8 +43,12 @@ public class ReisJtest {
 		graph.addNode(nodeE);
 		graph.addNode(nodeF);
 		 
-		System.out.println(graph.calculateShortestPathFromSource(graph, nodeA));
-		
+		Kaart r = Kaart.calculateShortestPathFromSource(graph, nodeA);
+		List<Plaats> m = nodeC.getShortestPath();
+//		
+		System.out.println(Kaart.calculateShortestPathFromSource(graph, nodeA));
+		System.out.println(nodeC.getShortestPath());
+		System.out.println(nodeC.getDistance()); 
 	}
 
 }
