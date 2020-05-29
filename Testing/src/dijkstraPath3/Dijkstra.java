@@ -31,14 +31,4 @@ public class Dijkstra {
         }
     }
 
-    public List<Plaats> getShortestPathTo(Plaats targetVerte) {
-        List<Plaats> path = new ArrayList<>();
-
-        for (Plaats vertex = targetVerte; vertex != null; vertex = vertex.getPreviosVertex()) {
-            path.add(vertex);
-        }
-
-        Collections.reverse(path);
-        return path;
-    }
 }

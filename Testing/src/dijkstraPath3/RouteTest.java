@@ -1,8 +1,13 @@
 package dijkstraPath3;
 
-public class App {
+import static org.junit.Assert.*;
 
-	public static void main(String[] args) {
+import org.junit.Test;
+
+public class RouteTest {
+
+	@Test
+	public void test() {
         Plaats v1 = new Plaats("Amersfoort");
         Plaats v2 = new Plaats("Culemborg");
         Plaats v3 = new Plaats("Beuschium");
@@ -16,8 +21,6 @@ public class App {
         dijkstra.computePath(v1);
         Route route = new Route();
         System.out.println(route.getShortestPathTo(v3));
-    }
-
 	}
 
-
+}

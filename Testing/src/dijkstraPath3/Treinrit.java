@@ -8,17 +8,12 @@ public class Treinrit extends Stap{
 		this.tijd = tijd;
 	}
 
-	@Override
 	public double getWeight() {
-		
 		return tijd;
 	}
 
-	@Override
 	public void setWeight(double weight) {
-		tijd = weight;
-
-		
+		tijd = weight;	
 	}
 
 }
