@@ -3,7 +3,7 @@ package dijkstraPath3;
 public class Vlucht extends Stap {
 	double tarief;
 	
-	public Vlucht(double afstand, Plaats startVertex, Plaats targetVertex) {
+	public Vlucht(double tarief, Plaats startVertex, Plaats targetVertex) {
 		super(startVertex, targetVertex);
 		this.tarief = tarief;
 	}

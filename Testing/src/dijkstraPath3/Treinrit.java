@@ -3,7 +3,7 @@ package dijkstraPath3;
 public class Treinrit extends Stap{
 	double tijd;
 	
-	public Treinrit(double afstand, Plaats startVertex, Plaats targetVertex) {
+	public Treinrit(double tijd, Plaats startVertex, Plaats targetVertex) {
 		super(startVertex, targetVertex);
 		this.tijd = tijd;
 	}

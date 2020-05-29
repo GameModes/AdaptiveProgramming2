@@ -17,6 +17,7 @@ public class RouteTestAuto {
         Plaats v5 = new Plaats("E");
         Plaats v6 = new Plaats("F");
 
+        //cirkeltest
         //1 -1> 2 -6> 3 -9> 4 (16) of 1 -2> 6 -8> 5 -7> 4 (17)
         v1.addNeighbour(new AutoRit(1, v1, v2));
         v2.addNeighbour(new AutoRit(6, v2, v3));
