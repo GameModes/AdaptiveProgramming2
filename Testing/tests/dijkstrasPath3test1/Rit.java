@@ -1,4 +1,4 @@
-package dijkstrasPath3;
+package dijkstrasPath3test1;
 
 public class Rit extends Stap{
 	public Integer snelheid;

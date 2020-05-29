@@ -1,4 +1,4 @@
-package dijkstrasPath3;
+package dijkstrasPath3test1;
 
 import static org.junit.Assert.*;
 import java.util.*;
@@ -23,7 +23,7 @@ public class KaartJtest2 {
 	        } 
 	  
 	        // Inputs for the DPQ graph 
-	        adj.get(0).add(new Plaats(1, 9)); 
+	        adj.get(0).add(new Plaats(1, 1)); 
 	        adj.get(0).add(new Plaats(2, 6)); 
 	        adj.get(0).add(new Plaats(3, 5)); 
 	        adj.get(0).add(new Plaats(4, 3)); 
@@ -32,15 +32,19 @@ public class KaartJtest2 {
 	        adj.get(2).add(new Plaats(3, 4)); 
 	  
 	        // Calculate the single source shortest path 
-	        Kaart dpq = new Kaart(V); 
-	        dpq.dijkstra(adj, source); 
+	        Kaart kaart = new Kaart(V); 
+	        kaart.dijkstra(adj, source); 
 	  
 	        // Print the shortest path to all the nodes 
 	        // from the source node 
 	        System.out.println("The shorted path from node :"); 
-	        for (int i = 0; i < dpq.getDist().length; i++) 
-	            System.out.println(source + " to " + i + " is "
-	                               + dpq.getDist()[i]); 
+	        System.out.println(source + " to " + 2 + " is " + kaart.getDist()[2]); 
+	        
+	          for (int i = 0; i < kaart.getDist().length; i++) { 
+//	            System.out.println(source + " to " + i + " is "
+//	                               + kaart.getDist()[i]); 
+	        	System.out.println(kaart.getDist()[i]);
+	        }
 	    } 
 	} 
 	}

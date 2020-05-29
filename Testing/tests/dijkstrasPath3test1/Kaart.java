@@ -1,4 +1,4 @@
-package dijkstrasPath3;
+package dijkstrasPath3test1;
 
 import java.util.*;
 import java.util.Map.Entry;
@@ -26,6 +26,8 @@ public void setDist(int[] dist) {
 	this.dist = dist;
 }
 
+//Source: https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-in-java-using-priorityqueue/
+//Team: Guy, Koen (voor motivatie)
 // Function for Dijkstra's Algorithm 
 public void dijkstra(List<List<Plaats> > adj, int src) 
 { 

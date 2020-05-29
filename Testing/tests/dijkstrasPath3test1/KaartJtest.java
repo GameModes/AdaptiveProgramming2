@@ -1,4 +1,4 @@
-package dijkstrasPath3;
+package dijkstrasPath3test1;
 
 import static org.junit.Assert.*;
 import java.util.HashSet;

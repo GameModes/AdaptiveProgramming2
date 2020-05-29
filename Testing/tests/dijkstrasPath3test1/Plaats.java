@@ -1,4 +1,4 @@
-package dijkstrasPath3;
+package dijkstrasPath3test1;
 
 import java.util.*;
 
@@ -8,9 +8,9 @@ public class Plaats implements Comparator<Plaats> {
    
     public Plaats() { 
     } 
-    public Plaats(int node, int cost) 
+    public Plaats(int i, int cost) 
     { 
-        this.node = node; 
+        this.node = i; 
         this.cost = cost; 
     } 
   
