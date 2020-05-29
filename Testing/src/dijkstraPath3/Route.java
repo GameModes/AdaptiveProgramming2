@@ -5,24 +5,15 @@ import java.util.Collections;
 import java.util.List;
 
 public class Route {
-    int distance = 0;
+    double distance = 0;
     List<Plaats> path = new ArrayList<>();
     
-
-
-    public int getWholeDistance(Plaats targetVerte) {
-        for (Plaats vertex = targetVerte; vertex != null; vertex = vertex.getPreviosVertex()) {
-            distance+=1;
-        }
-        
-        return distance;
-    }
     
-    public int getDistance() {
+    public double getDistance() {
 		return distance;
 	}
 
-	public void setDistance(int distance) {
+	public void setDistance(double distance) {
 		this.distance = distance;
 	}
 
@@ -35,7 +26,7 @@ public class Route {
 	}
 
 	public String toString() {
-		String routebeschrijving = "Neem de route: ";
+		String routebeschrijving = "Van " + path.get(0) + " naar " + path.get(path.size()-1) + " neem de route: ";
 		for(int c = 0; c < path.size(); c++){
 			routebeschrijving += path.get(c) + ", ";
 		}

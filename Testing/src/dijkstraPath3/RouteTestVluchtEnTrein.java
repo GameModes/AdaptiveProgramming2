@@ -17,13 +17,13 @@ public class RouteTestVluchtEnTrein {
 
         //cirkeltest
         //1 -1> 2 -6> 3 -9> 4 (16) of 1 -2> 6 -8> 5 -7> 4 (17)
-        v1.addNeighbour(new Treinrit(1, v1, v2));
-        v2.addNeighbour(new Treinrit(6, v2, v3));
-        v3.addNeighbour(new Treinrit(9, v3, v4));
+        v1.addNeighbour(new TreinRit(1, v1, v2));
+        v2.addNeighbour(new TreinRit(6, v2, v3));
+        v3.addNeighbour(new TreinRit(9, v3, v4));
         
-        v1.addNeighbour(new Treinrit(2, v1, v6));
-        v6.addNeighbour(new Treinrit(8, v6, v5));
-        v5.addNeighbour(new Treinrit(7, v5, v4));
+        v1.addNeighbour(new TreinRit(2, v1, v6));
+        v6.addNeighbour(new TreinRit(8, v6, v5));
+        v5.addNeighbour(new TreinRit(7, v5, v4));
         
         
 
