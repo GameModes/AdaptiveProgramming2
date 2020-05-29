@@ -15,7 +15,8 @@ public class App {
         Dijkstra dijkstra = new Dijkstra();
         dijkstra.computePath(v1);
         Route route = new Route();
-        System.out.println(route.getShortestPathTo(v3));
+        route.setPath(dijkstra.getShortestPathTo(v3));
+        System.out.println(route.toString());
     }
 
 	}
