@@ -32,13 +32,13 @@ public class Dijkstra {
     }
 
     public List<Plaats> getShortestPathTo(Plaats targetVerte) {
-        Route route = new ArrayList<>();
+        List<Plaats> path = new ArrayList<>();
 
         for (Plaats vertex = targetVerte; vertex != null; vertex = vertex.getPreviosVertex()) {
-            
+            path.add(vertex);
         }
 
-        Collections.reverse(route);
-        return route;
+        Collections.reverse(path);
+        return path;
     }
 }

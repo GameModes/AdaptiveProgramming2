@@ -8,13 +8,10 @@ public class AutoRit extends Stap{
 		this.afstand = afstand;
 	}
 
-	@Override
 	public double getWeight() {
-		
 		return afstand;
 	}
 
-	@Override
 	public void setWeight(double weight) {
 		afstand = weight;
 
