@@ -7,16 +7,16 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class Dijkstra {
-    public void computePath(Vertex sourceVertex) {
+    public void computePath(Plaats sourceVertex) {
         sourceVertex.setMinDistance(0);
-        PriorityQueue<Vertex> priorityQueue = new PriorityQueue<>();
+        PriorityQueue<Plaats> priorityQueue = new PriorityQueue<>();
         priorityQueue.add(sourceVertex);
 
         while (!priorityQueue.isEmpty()) {
-            Vertex vertex = priorityQueue.poll();
+            Plaats vertex = priorityQueue.poll();
 
-            for (Edge edge : vertex.getEdges()) {
-                Vertex v = edge.getTargetVertex();
+            for (Stap edge : vertex.getEdges()) {
+                Plaats v = edge.getTargetVertex();
 //                Vertex u = edge.getStartVertex();
                 double weight = edge.getWeight();
                 double minDistance = vertex.getMinDistance() + weight;
@@ -31,14 +31,14 @@ public class Dijkstra {
         }
     }
 
-    public List<Vertex> getShortestPathTo(Vertex targetVerte) {
-        List<Vertex> path = new ArrayList<>();
+    public List<Plaats> getShortestPathTo(Plaats targetVerte) {
+        Route route = new ArrayList<>();
 
-        for (Vertex vertex = targetVerte; vertex != null; vertex = vertex.getPreviosVertex()) {
-            path.add(vertex);
+        for (Plaats vertex = targetVerte; vertex != null; vertex = vertex.getPreviosVertex()) {
+            
         }
 
-        Collections.reverse(path);
-        return path;
+        Collections.reverse(route);
+        return route;
     }
 }

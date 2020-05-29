@@ -3,27 +3,27 @@ package dijkstraPath3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vertex implements Comparable<Vertex> {
+public class Plaats implements Comparable<Plaats> {
     private String name;
-    private List<Edge> edges;
+    private List<Stap> edges;
     private boolean visited;
-    private Vertex previosVertex;
+    private Plaats previosVertex;
     private double minDistance = Double.MAX_VALUE;
 
-    public Vertex(String name) {
+    public Plaats(String name) {
         this.name = name;
         this.edges = new ArrayList<>();
     }
 
-    public void addNeighbour(Edge edge) {
+    public void addNeighbour(Stap edge) {
         this.edges.add(edge);
     }
 
-    public List<Edge> getEdges() {
+    public List<Stap> getEdges() {
         return edges;
     }
 
-    public void setEdges(List<Edge> edges) {
+    public void setEdges(List<Stap> edges) {
         this.edges = edges;
     }
 
@@ -35,11 +35,11 @@ public class Vertex implements Comparable<Vertex> {
         this.visited = visited;
     }
 
-    public Vertex getPreviosVertex() {
+    public Plaats getPreviosVertex() {
         return previosVertex;
     }
 
-    public void setPreviosVertex(Vertex previosVertex) {
+    public void setPreviosVertex(Plaats previosVertex) {
         this.previosVertex = previosVertex;
     }
 
@@ -57,7 +57,7 @@ public class Vertex implements Comparable<Vertex> {
     }
 
     @Override
-    public int compareTo(Vertex otherVertex) {
+    public int compareTo(Plaats otherVertex) {
         return Double.compare(this.minDistance, otherVertex.minDistance);
     }
 }
